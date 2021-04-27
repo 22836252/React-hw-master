@@ -1,40 +1,68 @@
 import React, { Component } from "react";
 import logo from "../logo.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
-import Tabs from 'material-ui/lib/tabs/tabs';
-import Tab from 'material-ui/lib/tabs/tab';
 
 
+export default class Navbar extends Component {
+  scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
-class NavBar extends Component {
-	render() {
-		let styles = {
-			tabs: {
-				width: '390px',
-				position: 'absolute',
-				right: '60px',
-				textTransform: 'uppercase',
-			},
-			tab: {
-				height: '64px',
-				color: '#fff',
-			},
-			inkBar: {
-				height: '4px',
-				marginTop: '-4px',
-			},
-		};
-		return (
-			<div className="app-header">
-				<Tabs tabItemContainerStyle={{ backgroundColor: 'transparent'}} style={styles.tabs} inkBarStyle={styles.inkBar}>
-					<Tab style={styles.tab}label="Home" />
-					<Tab style={styles.tab}label="Account" />
-					<Tab style={styles.tab}label="About" />				
-				</Tabs>
-			</div>
-			
-		);
-	}
+  render() {
+    return (
+      
+      <nav className="nav" id="navbar">
+        <div className="nav-content">
+          <img
+            src={logo}
+            className="nav-logo"
+            alt="Logo"
+            onClick={this.scrollToTop}
+          />
+          <ul className="nav-items">
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="section1"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                About us
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="rooms"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Rooms
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Contact us
+              </Link>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+      
+    );
+    
+  }
+  
 }
-
-export default NavBar;

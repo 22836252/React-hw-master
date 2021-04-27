@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Section from "./Components/Section";
-
+import Button from '@material-ui/core/Button';
 import { Carousel } from 'react-bootstrap';
 import Rooms from "./Components/Rooms"
 import Contact from "./Components/contactus"
@@ -35,7 +35,29 @@ class App extends Component {
         />
         <Rooms />
         <Contact />
+        <Button variant="contained" color="primary">
+      你好，世界
+    </Button>
+    <Button variant="contained">Default</Button>
+<Button variant="contained" color="primary">
+  Primary
+</Button>
+<Button variant="contained" color="secondary">
+  Secondary
+</Button>
+<Button variant="contained" disabled>
+  Disabled
+</Button>
+<Button variant="contained" color="primary" href="#contained-buttons">
+  Link
+</Button>
+
+    <div>
+        message: {this.props.message}
+        <Button onClick={this.props.onClickSubmit}>Submit</Button>
+      </div >
       </div>
+      
     );
   }
 }
