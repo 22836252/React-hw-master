@@ -1,0 +1,39 @@
+{
+  "name": "react-smooth-scrolling",
+  "homepage": "https://littledollcat.github.io/React-hw/",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "bootstrap": "^4.6.0",
+    "firebase-admin": "^5.13.1",
+    "firebase-functions": "^3.13.2",
+    "jquery": "^1.12.4",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.5.2",
+    "react-dom": "^16.14.0",
+    "react-scripts": "^3.4.4",
+    "react-scroll": "^1.8.2",
+    "react-window": "^1.8.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
